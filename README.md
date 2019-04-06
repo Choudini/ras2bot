@@ -32,20 +32,20 @@ Commandes du bot :
 
 //tournois
 
-!item : montre un item au hasard parmi les items roublard
+* !item : montre un item au hasard parmi les items roublard
 
-/refresh item : refresh le cooldown de tout le monde. (doit avoir les droits de mute (jsp pq))
+* /refresh item : refresh le cooldown de tout le monde. (doit avoir les droits de mute (jsp pq))
 
 
 //draft
 
-pick [classe]
+* pick [classe]
 
-ban [classe]
+* ban [classe]
 
-/refresh draft : refresh le cooldown du channel.
+* /refresh draft : refresh le cooldown du channel.
 
 
 //map
 
-!map : donne une map goulta aléatoire
+* !map : donne une map goulta aléatoire
