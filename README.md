@@ -20,6 +20,8 @@ Lancer stop.exe pour éteindre le bot
 Lancer help.exe si le bot ne fonctionne pas et suivre les instructions.
 
 
+............
+
 
 Quand le bot est lancé avec la fenetre node :
 
