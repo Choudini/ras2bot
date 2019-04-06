@@ -1,0 +1,41 @@
+{
+  "joueur1": [
+    "Delphine",
+    "Delphine",
+    "Test"
+  ],
+  "joueur2": [],
+  "gagnants": [
+    [
+      "Delphine",
+      "Delphine",
+      "test",
+      "Delphine",
+      "Delphine",
+      "test",
+      "Delphine",
+      "Delphine",
+      "test",
+      "Delphine",
+      "Delphine",
+      "test"
+    ],
+    {
+      "aled": [
+        "Delphine",
+        "Delphine",
+        "Test"
+      ],
+      "views": 0.05856622504279563
+    }
+  ],
+  "points": [
+    {
+      "user": ""
+    },
+    {
+      "user": "",
+      "point": ""
+    }
+  ]
+}
