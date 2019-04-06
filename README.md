@@ -10,16 +10,16 @@ pm2 stop 0
 
 //allumer le bot
 
-pm2 start 0
+* pm2 start 0
 
 //redemarrer le bot
 
-pm2 restart 0
+* pm2 restart 0
 
 
 //voir les messages d'erreur (100 derniers messages)
 
-pm2 log main 0 --lines 100
+* pm2 log main 0 --lines 100
 
 Si il y a un problème lance l'executeur help.
 
