@@ -5,7 +5,7 @@
 
 1. Executer le fichier "install.bat" 
 
- *des raccourcis seront automatiquement crée sur ton bureau pour allumer et éteindre le bot.*
+ *Des raccourcis seront automatiquement crée sur ton bureau pour allumer et éteindre le bot.*
 
 2. Attendre que la fenetre console se ferme.
 
