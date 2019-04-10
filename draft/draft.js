@@ -23,40 +23,92 @@ module.exports = {
         const  Discord = require('discord.js');
         var bot = new Discord.Client();
         
-       const fs = require('fs')
-       let config = JSON.parse(fs.readFileSync('./draft/config.json', 'utf-8'))
+   
         
        const FileSync = require('lowdb/adapters/FileSync')
        const adapter = new FileSync('./draft/config.json')
        const low = require ('lowdb')
        const db = low(adapter);
        
+       const aled = message.channel.id;
+
+      
 
 
-   if (message.content.startsWith("/add draft")){
+const fs = require('fs')
+const jsonData = JSON.parse(fs.readFileSync('./draft/config.json', 'utf-8'))
 
+   if (message.content.startsWith("/config draft -add")){
+    if (message.member.hasPermission("ADMINISTRATOR")){
+    message.delete()
 
-    
-     const fs = require('fs')
-let jsonData = JSON.parse(fs.readFileSync('./draft/config.json', 'utf-8'))
-
-     if (jsonData.channel.indexOf(message.channel.id) !== -1) { 
+if (jsonData.channel.indexOf(aled) !== -1 ){
      message.reply("Le salon est déjà configuré pour la draft.") 
+     .then(message => {
+      message.delete(10000)
+      })
      } 
      else {
      
-       var channel = message.channel.id;
+       
 
 
  message.reply("Salon correctement configuré pour la draft.")
+ .then(message => {
+  message.delete(10000)
+  })
  db.get('channel')
 
- .push( channel,)
+ .push(aled)
  .write()
  }
+     }else {
+      message.reply("Vous ne possedez pas les droits admin.")
+      .then(message => {
+        message.delete(10000)
+        })
      }
+    
+    }
 
-        if (config.channel.indexOf(message.channel.id) !== -1) {
+
+
+     if (message.content.startsWith("/config draft -del")){
+      if (message.member.hasPermission("ADMINISTRATOR")){
+        message.delete()
+
+        if (jsonData.channel.indexOf(aled) === -1 ){
+          message.reply("Aucunes configuration présente sur ce salon.") 
+          .then(message => {
+            message.delete(10000)
+            })
+
+          }else{
+      const channel = message.channel.id;
+      db.get("channel")
+      
+      .pull(channel )
+      .write()
+
+      message.reply("Configuration du salon pour la draft supprimé.")
+      .then(message => {
+        message.delete(10000)
+        })
+     }}else {
+      message.reply("Vous ne possedez pas les droits admin.")
+      .then(message => {
+        message.delete(10000)
+        })
+
+     }
+    
+    }
+
+   
+
+
+
+     if (jsonData.channel.indexOf(aled) !== -1){
             message.content = message.content.toLowerCase() ;
           
           
@@ -1197,7 +1249,7 @@ let jsonData = JSON.parse(fs.readFileSync('./draft/config.json', 'utf-8'))
         }}}
 
 
-        if (message.content === "/refresh draft") {
+        if (message.content === "!refresh draft") {
 
           console.log("stop")
           message.delete(100)

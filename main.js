@@ -26,10 +26,6 @@ const adapter = new FileSync('./draft/config.json')
 const low = require ('lowdb')
 const db = low(adapter);
 //.............DB..............//
-db.defaults({channel :[]})
-.write();
-db.defaults({user :[]})
-.write();
 
 //.............DB..............//
 
@@ -47,47 +43,17 @@ require('events').EventEmitter.defaultMaxListeners = 100;
 //neverdelet
 
 //choix de la map
+
+
+
+
 bot.on('message', message => {
-  if (message.content === "!map") {
-    
-    if (message.author.bot) return;
-    
-      message.delete(600)
-     
-  
-      
+  let command = message.content;
 
-    message.channel.send("Choix de la carte en cour.")
-    .then(message => {
-   
-      message.delete(6000);
-  })
-    number = 17; 
-    imageNumber = Math.floor (Math.random() *(number -1 + 1)) + 1; 
-    message.channel.send (`Voici la map sur laquelle vous allez jouer !` ,{files: ["./map/" + imageNumber + ".jpg"]})}
-  
+  if ( map.checkMap(message) )
+ 
+      return;
 
-  
-    if (message.content === "!map+") {
-    
-      if (message.author.bot) return;
-      
-        message.delete(600)
-       
-    
-        
-  
-      message.channel.send("Choix de la carte en cour.")
-      .then(message => {
-     
-        message.delete(6000);
-    })
-      numberplus = 22; 
-      imageNumberplus = Math.floor (Math.random() *(numberplus -1 + 1)) + 1; 
-      message.channel.send (`Voici la map sur laquelle vous allez jouer !` ,{files: ["./map+/" + imageNumberplus + ".jpg"]})
-  
-  
-  }
 });
 
 bot.on('message', message => {

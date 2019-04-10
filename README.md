@@ -70,6 +70,10 @@ Commandes du bot :
 
 * /refresh draft : refresh le cooldown du channel.
 
+* /config draft -add
+
+* /config draft -del
+
 
 //map
 
