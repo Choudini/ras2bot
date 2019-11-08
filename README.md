@@ -1,6 +1,5 @@
 # ras2bot
 
-Commande de Mehdi pour un tournoi. 
 
 //comment lancer le bot ?
 
@@ -79,3 +78,5 @@ Commandes du bot :
 //map
 
 * !map : donne une map goulta aléatoire
+
+>Commande de Mehdi pour un tournoi dofus. 
