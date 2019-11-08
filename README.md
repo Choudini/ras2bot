@@ -1,5 +1,6 @@
 # ras2bot
 
+Commande de Mehdi pour un tournoi. 
 
 //comment lancer le bot ?
 
